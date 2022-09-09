@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/backgroundImageView"
+        android:layout_width="410dp"
+        android:layout_height="748dp"
+        android:contentDescription="@string/background_description"
+        android:scaleType="fitXY"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/zodiac_portrait" />
+
+    <TextView
+        android:id="@+id/promptTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center_horizontal"
+        android:text="@string/prompt_text"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </TextView>
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="291dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="35dp"
+        android:background="@android:color/holo_blue_light"
+        android:gravity="end"
+        app:layout_constraintTop_toBottomOf="@+id/promptTextView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/spinner"
+        app:layout_constraintTop_toTopOf="@+id/spinner">
+
+        <RadioButton
+            android:id="@+id/radioButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="yesterday"
+            android:textColor="@color/white">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioButton2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="today"
+            android:checked="true"
+            android:textColor="@color/white">
+
+        </RadioButton>
+
+        <RadioButton
+            android:id="@+id/radioButton3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tomorrow"
+            android:textColor="@color/white">
+
+        </RadioButton>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="179dp"
+        android:layout_height="59dp"
+        android:background="#FF9800"
+        android:onClick=""
+        android:text="@string/submit_button"
+        android:textColor="#424242"
+        app:layout_constraintEnd_toStartOf="@+id/radioGroup"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinner"
+        android:layout_marginTop="30dp"
+        tools:ignore="OnClick" />
+
+    <TextView
+        android:id="@+id/resultView"
+        android:layout_width="322dp"
+        android:layout_height="249dp"
+        android:foregroundGravity="fill_horizontal"
+        android:justificationMode="inter_word"
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
